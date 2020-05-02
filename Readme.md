@@ -1,3 +1,16 @@
+## Changes
+- Experimented with cropping ability. Commit works but causes rendering artifact on OSD
+- daviey/dafang-cross-compile docker image is missing xsltproc and wget
+- repo misses three .so files:
+```
+cd _install/lib/
+wget https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks/raw/master/firmware_mod/lib/libalog.so
+wget https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks/raw/master/firmware_mod/lib/libimp.so
+wget https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks/raw/master/firmware_mod/lib/libsysutils.so
+```
+- If compiling in Docker, need to clone repository inside Docker, otherwise weird error will occur. 
+
+
 ## Main Repository for Low-Level Development
 
 ### Build Enviroment

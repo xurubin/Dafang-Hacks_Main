@@ -750,18 +750,18 @@ ImpEncoder::ImpEncoder(impParams params) {
     }
     m_chn.fs_chn_attr.type = FS_PHY_CHANNEL;
 
-    m_chn.fs_chn_attr.crop.enable = 0;
-    m_chn.fs_chn_attr.crop.width = currentParams.width;
-    m_chn.fs_chn_attr.crop.height = currentParams.height;
+    m_chn.fs_chn_attr.crop.enable = 1;
+    m_chn.fs_chn_attr.crop.width = 1920 / 2;
+    m_chn.fs_chn_attr.crop.height = 1080;
     m_chn.fs_chn_attr.crop.top = 0;
-    m_chn.fs_chn_attr.crop.left = 0;
+    m_chn.fs_chn_attr.crop.left = 1920 / 2;
 
     m_chn.fs_chn_attr.scaler.enable = 1;
-    m_chn.fs_chn_attr.scaler.outwidth = currentParams.width;
+    m_chn.fs_chn_attr.scaler.outwidth = currentParams.width / 2;
     m_chn.fs_chn_attr.scaler.outheight = currentParams.height;
 
 
-    m_chn.fs_chn_attr.picWidth = currentParams.width;
+    m_chn.fs_chn_attr.picWidth = currentParams.width / 2;
     m_chn.fs_chn_attr.picHeight = currentParams.height;
 
     m_chn.framesource_chn.deviceID = DEV_ID_FS;
